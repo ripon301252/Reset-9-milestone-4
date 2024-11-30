@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js & Practice task</title>
+</head>
+<body>
+    <script>
+    document.write
+        // parseFloat
+        const orangePrice = parseFloat("20.5");
+        console.log(orangePrice, typeof orangePrice )
+
+    // parseInt
+        const chocolate = parseInt("20.5");
+        console.log(chocolate, typeof chocolate)
+
+    // toFixed
+        const first = 0.1;
+        const second = 0.2;
+        const total = first + second;
+        console.log(total.toFixed(1))
+
+    // infinity
+        const num = -50 / 0; 
+        console.log(num);   
+
+    //-------------------------------------------
+
+    // Task-1
+    // You went to the supermarket to buy some oranges and apples. Calculate how much money the shopkeeper will return.
+        const money = 1000;
+        const oranges = 340;
+        const apples = 360;
+        const cost = oranges + apples;
+        const returnMoney = money - cost;
+        console.log("return money", returnMoney, "Tk");
+
+
+    // Task-2
+    // Write a program to calculate the average marks of Mathematics, Biology, Chemistry, Physics, and Bangla of a student.
+        const mathematics = 75.25;
+        const biology = 65;
+        const chemistry = 80;
+        const physics = 35.45;
+        const bangla = 99.50;
+
+        const totalMarks = mathematics + biology + chemistry + physics + bangla;
+        const average = totalMarks / 5;
+        // console.log(totalMarks);
+        console.log(average.toFixed(2));
+
+
+
+    // Task-3
+    // You task is to divide the given number by 5 and show the remainder as the output.
+        const input = 119;
+        const modulo = input % 5;
+        console.log(modulo);
+
+
+    // Task-4
+    // What will be the result of the following codes:
+        const a = isNaN("11");
+        const b = isNaN("2-10");
+  
+        
+     
+
+          
+
+        
+    </script>
+</body>
+</html>

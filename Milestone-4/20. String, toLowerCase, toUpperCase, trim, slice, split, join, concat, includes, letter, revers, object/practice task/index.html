@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice task</title>
+</head>
+<body>
+    <script>
+        // task-1. Access the golden rod color value in output
+        const color = {
+            red: '#ff0000',
+            green: '#00ff00',
+            blue: '#0000ff',
+            'golden rod': '#daa520'
+        }
+        console.log(color['golden rod']);
+
+
+        // task-2. for this object below add a property named passenger capacity with value 5
+        const car = {
+            make: 'Toyota',
+            model:'Corolla',
+            year: 2020,
+        }
+        console.log(car);
+        car.passengerCapacity = 5;
+        console.log(car);
+
+
+        
+        // task-3. Display the physics marks as output
+        const student = {
+            name: 'Amena',
+            id: 22009,
+            physics: {
+                subject: 'HSC Physics',
+                author: 'Mossarof Sir',
+                marks: 30
+            }
+        };
+        console.log(student.physics.marks);
+
+
+          // task-4. Count the number of properties.
+          let student1 = {
+            name:'Mahfuz',
+            age: 32,
+            city: 'Gazipur',
+            isStudent: false
+        }
+        const prop = Object.keys(student1);
+        console.log(prop);
+        console.log(prop.length);
+
+
+        // task-5. (Hard) Loop through an object and print the key-value pairs with their types
+        let myObject = {
+            name: 'john Doe',
+            age: 25,
+            city: 'Example City',
+            isStudent: true
+        }
+        const keys = Object.keys(myObject);
+        console.log(keys);
+        for(const key of keys){
+            console.log( 'key',':', key, '|', 'type', ':', typeof myObject.age);
+        }
+
+        //----------------------------------------------
+        // string-task
+        // Task-1:
+        // Count how many times a string has the letter a
+        const sentence = 'I am a good person and hardworking';
+       
+        for(const letter of sentence){
+            console.log(letter);
+        }
+
+        // Task-2:
+        // Count how many times a string has the letter a or A
+
+
+
+        // Task-3:
+        // Check whether a string contains all the vowels a, e, i, o, u
+
+
+        // Task-4:
+        // If a given string has either x, replace x by y. if the given string has X, replace it by Y.
+
+        // Hint: You should be able to check whether x or X exists. After that, search online how to replace a character in a string.
+
+        
+        // Task-5:
+        // Capitalize Every first Letter of each word in a String  
+       
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <script>
+        // function declare 
+        function fanOffKor(){
+            console.log('bosa theke uthe dara');
+        }
+        // call the function
+        fanOffKor();
+    //---------------------------------------------------------
+
+        // parameter
+        function vaatKhao(){
+            console.log('shak khao shobji khao')
+        }
+        vaatKhao()
+
+    console.log('--------------------------------------------')
+
+        // square
+        function square(number){
+            const borgo = number * number;
+            console.log('square of the given number is:', borgo);
+        }
+        square(4);
+        square(5);
+
+    console.log('--------------------------------------------')
+
+        // add
+        function add(num1, num2){
+            const sum = num1 + num2;
+            console.log('add of the given number is:', sum);
+        }
+        add(25, 25);
+        add(28, 20);
+
+    console.log('--------------------------------------------')
+
+    //----------------------------------------------------------
+
+        // multiplex
+        function doubleIt(number){
+            const doubled = number * 2;
+            console.log(number, doubled);
+        }
+        doubleIt(15);
+        doubleIt(88);
+        doubleIt(873);
+
+      console.log('------ variable pass ------')
+
+        // variable pass
+        const number = 55;
+        doubleIt(number);
+        const money = 112;
+        doubleIt(money);
+
+    console.log('--------------------------------------------')
+
+        // difference
+        function difference(num1, num2){
+            const diff = num1 - num2;
+            console.log(num1, num2, 'difference is', diff);
+        }
+        const fatherAge = 40;
+        const myAge = 10;
+        difference(fatherAge, myAge);
+
+    console.log('--------------------------------------------')
+
+    //--------------------------------------------------------
+
+        //return
+        function tenTimes(number){
+            const result = number * 10
+            return result;
+        }
+        const output = tenTimes(5);
+        console.log('output ls:', output);
+            console.log('------')
+        const bigNumber = tenTimes(99);
+        console.log(bigNumber)
+
+    console.log('--------------------------------------------')
+
+        function cutHalf(number){
+            const half = number / 2;
+            return half;
+        }
+        const output2 = cutHalf(10);
+        console.log('10 half is :', output2);
+
+    console.log('--------------------------------------------')
+
+    //---------------------------------------------------------
+
+        // shortcutt return
+        function add(price1, price2){
+            return price1 + price2;
+        }
+        const bill = add(5, 80);
+        console.log('bill is :', bill);
+
+    console.log('--------------------------------------------') 
+
+        function doMath(num1, num2){
+            const sum = num1 + num2;
+            const diff = num1 - num2;
+            const multiply = sum * diff;
+            const result = multiply / 2;
+            return result;
+        }
+        const result = doMath(10, 5);
+        console.log(result);
+
+    console.log('--------------------------------------------') 
+
+        // conditional return
+        function isEven(number){
+            if(number % 2 === 0){
+                return true
+            }
+            else{
+                return false;
+            }
+        }
+        console.log(isEven(5));
+        console.log(isEven(110));
+
+    console.log('--------------------------------------------') 
+
+        // shortcutt conditional return
+        function isOdd(number){
+            if(number % 2 === 1){
+                return true
+            }
+            return false
+        }
+        console.log(isOdd(10));
+        console.log(isOdd(7));
+
+    console.log('--------------------------------------------') 
+    //---------------------------------------------------------
+
+        // for a given string tell me whether it has even number of characters or not
+        function evenSizeString(str){
+            const size = str.length;
+            console.log(str, size);
+            if(size % 2 === 0){
+                console.log('even size');
+                return true;
+            }
+            else{
+                console.log('odd size');
+                return false;
+            }
+        }
+        evenSizeString('Dhaka');
+        evenSizeString('Faka');
+        console.log(evenSizeString('Dhaka'));
+        console.log(evenSizeString('Faka'));
+
+    console.log('--------------------------------------------') 
+        
+        function doubleOrTriple(number, doDouble){
+            if(doDouble === true){
+                const result = number * 2;
+                return result
+            }
+            else{
+                const result = number * 3;
+                return result;
+            }
+        }
+        console.log(doubleOrTriple(5, true));
+        console.log(doubleOrTriple(5, false));
+
+    console.log('--------------------------------------------') 
+        
+        function numberOfArray(numbers){
+            const array = numbers;
+            return array;
+        }
+        const array = numberOfArray([2, 3, 25, 63, 96]);
+        console.log('this is array:', array);
+
+    console.log('--------------------------------------------') 
+
+        function numberOfElements(numbers){
+            const len = numbers.length;
+            return len;
+        }
+        const lenght = numberOfElements([2, 3, 25, 63, 96]);
+        console.log('array langth is:', lenght);
+
+    console.log('--------------------------------------------') 
+
+        function getAge(person){
+            const age = person.age;
+            return age;
+        }
+        console.log();
+        
+    console.log('--------------------------------------------') 
+    //---------------------------------------------------------
+
+        // objective : write a function to give the sum of all numbers in an array
+        // step-1: declare a function
+        // step-2: call check whether the function is called properly
+        // step-3: set a parameter(s)
+        // step-4: pass the parameter(s), check whether parameter is passed in a proper formet
+        // step-5: do the function task (step by step)
+        function sumOfNumbers(numbers){
+            let sum = 0;
+            for(const number of numbers){
+                console.log(number);
+                sum = sum + number
+            }
+            return sum;
+        }
+        const numbs = [2, 3, 6, 8, 9]
+        const sum = sumOfNumbers(numbs);
+        console.log('sum of numbers is:', sum); 
+
+    console.log('--------------------------------------------') 
+    //---------------------------------------------------------
+
+        // create function that will return only the even numbers
+        // return the sum of even numbers
+        function evenNumbersOnly(numbers){
+            const evens = [];
+            for(const number of numbers){
+                if(number % 2 === 0){
+                    console.log(number);
+                    evens.push(number);
+                }
+            }
+            return evens;
+        }
+        const numbers = [1, 2, 3, 4, 5, 6];
+        const evens = evenNumbersOnly(numbers);
+        console.log('even numbers are', evens);
+
+    console.log('--------------------------------------------') 
+        
+        let sum2 = 0;
+        function sumOfEvenNumbers(numbers){
+            for(const number of numbers){
+                if(number % 2 === 0){
+                    console.log(number)
+                    sum2 = sum2 + number
+                }
+            }
+            return sum2;
+        }
+        const sum3 = sumOfEvenNumbers(numbers);
+        console.log('sum of the even numbers is:', sum3);
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

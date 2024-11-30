@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice task sort</title>
+</head>
+<body>
+    <script>
+        // Task-1
+        // Write a JavaScript code to reverse the array colors without using the reverse method.
+        const colors = ['red', 'blue', 'green', 'yellow', 'orange'];
+        // console.log(colors.reverse())  
+
+        const rev_colors = [];
+        for(const color of colors){
+            // console.log(color);
+            rev_colors.unshift(color);
+        }
+        console.log(rev_colors); // Output: ['orange', 'yellow', 'green', 'blue', 'red']
+
+
+
+
+        // Task-2
+        //Write a JavaScript code to get the even numbers from an array using any looping technique.
+        const numbers = [12, 98, 5, 41, 23, 78, 46];
+        const evens = [];
+        for(const number of numbers){
+            if(number % 2 === 0){
+                //console.log(number);
+                evens.push(number);
+            } 
+        }
+        console.log('Evens number are', evens);  //Output:[12, 98, 78, 46]
+         
+
+
+        // Task-3
+         // Use a for...of loop to concatenate all the elements of an array into a single string.
+         const words = ['Tom', 'Tim', 'Tin', 'Tik'];
+         let string = '';
+         for(const word of words){
+            // console.log(word);
+            string = string + word
+         }
+         console.log('string is',':', string );  // Output:'TomTimTinTik'
+         
+
+
+        //Task-4 (Hard)
+        //Reverse the words of a sentence. Only the position of the word will be reversed. check out the output
+        const sentences = 'I am a hard working person';
+        
+        const rev_sentence = (sentences.split(' ')) 
+        console.log(rev_sentence);
+
+        const reverse_sentence = [];
+        for(let i = rev_sentence.length-1; i >=0; i--){
+            const sentence = rev_sentence[i];
+            // console.log(sentence);
+            reverse_sentence.push(sentence);
+        }
+        console.log( reverse_sentence.join(' '));   //Output:'person working hard a am I'
+
+        
+        
+    </script>
+</body>
+</html>

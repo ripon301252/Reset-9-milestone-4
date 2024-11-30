@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array more</title>
+</head>
+<body>
+    <script>
+        //------- Looping Technique -------
+        // 1. for loop
+        // 2. while loop
+        // 3. do while --> ignore
+        // 4. for of --> only for array loop
+        // 5. for in --> only for object loop
+
+        const friends = ['Elon', 'Bill', 'Mark', 'waren'];
+        // for of loop
+        for(const friend of friends){
+            console.log(friend);
+        }
+
+        // for loop
+        for(let i = 0; i < friends.length; i++){
+            console.log(i, friends[i]);
+        }
+
+        // while loop
+        let i = 0;
+        while(i < friends.length){
+            console.log(friends[i]);
+            i++;
+        }
+
+        const numbers = [25, 26, 38, 666, 96, 86, 85, 95, 75, 23, 65, 45, 55, 50, 22]
+        // for of loop
+        for(const number of numbers){
+            console.log(number);
+        }
+
+        // for loop
+        for(let i = 0; i < numbers.length; i++){
+            console.log(i, numbers[i]);
+        }
+
+        // while loop
+        let n = 0;
+        while(n < numbers.length){
+            console.log(numbers[n]);
+            n++;
+        }
+        //----------------------------------------------
+        // revers
+        const digits = [1, 2, 3, 4, 5, 6, 7];
+        console.log(digits);
+        digits.reverse();
+        console.log(digits)
+
+
+        const prices = [1, 2, 3, 4, 5, 6, 7]
+        const reverse = [];
+        for(const price of prices){
+            //console.log(price);
+            reverse.unshift(price);
+        }
+        console.log(reverse);
+
+
+        const rev_numbers = [];
+        for(let i = 0; i < prices.length; i++){
+            const price = prices[i];
+            rev_numbers.unshift(price);
+        }
+        console.log(rev_numbers);
+
+        // revers side
+        const rev_rev_numbers = [];
+        for(let i = prices.length-1; i >= 0; i--){
+            const price = prices[i];
+            console.log(price);
+            rev_rev_numbers.push(price)
+        }
+        console.log(rev_rev_numbers);
+        //-------------------------------------
+
+        const persons = ['rakib', 'nokib', 'sakib', 'akib', 'dakib', 'anis'];
+        const sortedPersons = persons.sort();
+        console.log(sortedPersons);
+
+        // sort -->
+        // const maths = [4, 7, 2, 8, 3, 1, 5, 6];
+        // Ascending  ---> smaller to larger : [1, 2, 3, 4, 5, 6, 7, 8];
+        // Descending ---> larger to smaller : [8, 7, 6, 5, 4, 3, 2, 1];
+
+        const maths = [4, 7, 2, 8, 43, 3, 1, 5, 6, 12, ];
+
+        // Ascending
+        const numbers_asc = [...maths].sort(function (a, b) {return a - b});
+        console.log(numbers_asc);
+
+        // Descending
+        const numbers_dsc = [...maths].sort(function (a, b) {return b - a});
+        console.log(numbers_dsc);
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

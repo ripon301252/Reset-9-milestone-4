@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String, toLowerCase, toUpperCase, trim, slice, split, join, concat, includes, letter, revers, object</title>
+</head>
+<body>
+    <script>
+        const country = 'Bangladesh';
+        const division = "Barisal";
+        const district = `B-Baria`;
+        const thana = new String('Demra');
+        console.log(typeof country, typeof division, typeof district, typeof thana);
+        console.log(thana)
+
+        // string is immutable --> not changeable
+        // array is mutable --> you can change the array elements
+        const capital = 'Dhaka';
+        console.log(capital.length);
+        console.log(capital[3])
+        //------------------------------------------
+        
+        const school = 'RAJ Uk Uttara Model School';
+        // toLowerCase
+        console.log(school.toLowerCase());
+        // toUpperCase
+        console.log(school.toUpperCase());
+
+
+        const subject = 'Chemistry';
+        const book = 'chemistry';
+        if(subject.toLowerCase === book.toLowerCase){
+            console.log('Read the book')
+        }
+        else{
+            console.log('No Read')
+        }
+
+        // trim (out the white space)
+        const drink = 'water ';
+        const liquid = ' water';
+        if(drink.trim() === liquid.trim()){
+            console.log('water is life')
+        }
+        else{
+            console.log('Drinking water')
+        }
+        //---------------------------------------
+
+        // slice
+        const address = 'andorkilla';
+        const part = address.slice(2, 7);
+        console.log(part); // dorki
+
+        // split
+        const sentence = 'I am a good person and hardworking';
+        console.log(sentence.split())
+        console.log(sentence.split(''))
+        console.log(sentence.split(' '))
+        console.log(sentence.split('a'))
+
+        const friendsStr = 'Rahim,karim,dahim,lahim,fahim,sahim';
+        const friends = friendsStr.split(',');
+        console.log(friends)
+
+        // join
+        const realFriend = ['Rahim', 'karim', 'dahim', 'lahim', 'fahim', 'sahim'];
+        console.log(realFriend.join());
+        console.log(realFriend.join('|'));
+        console.log(realFriend.join('+'));
+        console.log(realFriend.join('-'));
+        console.log(realFriend.join('_'));
+
+        // concat
+        const first = 'Abid';
+        const last = 'Navid';
+        const fullName = first + ' ' + last;
+        console.log(fullName);
+
+        const fullName2 = first.concat(' ').concat(last);
+        console.log(fullName2);
+
+        // includes
+        console.log(last.includes('d'));
+        console.log(last.includes('x'));
+        //------------------------------------------------
+        
+        const sentence2 = 'I am learning web Dev.';
+        // letter
+        for(const letter of sentence2){
+            console.log(letter);
+        }
+
+        // Revers
+        let revers = '';
+        for(const letter of sentence2){
+            revers = letter + revers;
+        }
+        console.log(revers);
+
+        // another way revers (ignore)
+        let rev = '';
+        for(let i = 0; i <sentence2.length; i++){
+            console.log(i); // get index
+            console.log(sentence2[i]); // get letter
+
+            const letter = sentence2[i];
+            rev = letter + rev
+        }
+        console.log(rev); // get revers
+
+
+        // shortcut revers
+        reversed = sentence2.split('').reverse().join('');
+        console.log(reversed);
+        //----------------------------------------------------
+        
+        // Object
+        const bottle = {
+            brand :'apple',
+            price : 60,
+            color : 'white',
+            isClean : false,
+            isWater : true
+        }
+        console.log(bottle);
+
+        const subject2 = {
+            name : 'English',
+            teacher : 'Amena mam',
+            examDate : '30 Nov 2024',
+            chapters : ['first', 'second', 'third'],
+            exams : {
+                name : 'Final Exam',
+                marks : 100,
+            },
+            'fav books' : ['bangla', 'math', 'history']
+        }
+        console.log(subject2);
+
+        //property of object seen by dot notation
+        console.log(subject2.chapters);
+
+        const date = subject2.examDate;
+        console.log(date);
+
+        // change value by dot notation
+        subject2.teacher = 'Rasheda mam'
+        console.log(subject2); // Rasheda mam
+
+        //property of object seen by third bracket notation.
+        console.log(subject2['exams']);
+        console.log(subject2['fav books']);
+
+        // change value by third bracket notation.
+        subject2['teacher'] = 'sultana mam';
+        console.log(subject2);
+
+        subject2['fav books'] = 'English'
+        console.log(subject2['fav books']);
+
+        // get the property by variable
+        const keyName = 'chapters'
+        console.log(subject2[keyName]);
+
+            //-------//
+
+        const computer = {
+            brand : 'lenovo', 
+            price : 35000,
+            processor : 'intel',
+            ssd : '128gb',
+            monitor : 'hp',
+        }    
+        // get object property by Object.keys
+        const keys = Object.keys(computer);
+        console.log(keys);
+
+        // get object values by Object.values
+        const values = Object.values(computer);
+        console.log(values);
+
+
+        // nested object
+        const college = {
+            name : 'vnc',
+            class : ['11', '12'],
+            events : ['science fair', 'bijoy dibos', '21 Feb'],
+            unique : {
+                color : 'blue',
+                result : {
+                    gpa : 5,
+                    merit : 'top'
+                }
+            }
+        }
+        console.log(college);
+        console.log(college.unique.color); // blue
+        console.log(college.unique.result.merit); // top
+
+        // change the object property value
+        college.unique.result.merit = 'top top top most'; 
+        console.log(college.unique.result.merit); // top top top most
+
+        // get the index value.
+        console.log(college.events[1]); // bijoy dibos
+
+        // get change the index value.
+        college.events[1] = '16 December';
+        console.log(college.events[1]);
+        console.log(college);
+
+        // delete property
+        delete college.unique.result.gpa;
+        console.log(college);
+
+        //-----------//
+
+        // Loop an object
+        const mobile = {
+            brand : 'samsung',
+            price : 25000,
+            color : 'black',
+            camera : '12mp',
+            isNew : true
+        }
+        for(const prop in mobile){
+            console.log(prop);
+            console.log(mobile[prop]);
+        }
+
+        
+        const keysMbl = Object.keys(mobile);
+        console.log(keysMbl);
+        for(const key of keysMbl){
+            console.log(key, ':', mobile[key]);
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>

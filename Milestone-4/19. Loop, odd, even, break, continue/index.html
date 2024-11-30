@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop, odd, even, break, continue</title>
+</head>
+<body>
+    <script>
+        const numbers = [25, 36, 55, 66, 87, 96, 63, 85, 40, 88];
+        console.log(numbers);
+        // for of Loop
+        for(const num of numbers){
+            console.log(num);
+        }
+
+        const friends = ['kamal', 'Bamal', 'Damal', 'jamal', 'khamal', 'mamal'];
+        for(const friend of friends){
+            console.log(friend);
+        }
+
+        // while Loop
+        let digit = 0;
+        if(digit < 10){
+            console.log('10 ki 0 er chite boro')
+        }
+
+        while(digit < 40){   // loop variable
+            console.log("loooooooooooooing")
+            digit = digit + 1;
+        }
+
+        
+        //------------------------------------------------
+        let num = 1; // loop variable
+        while(num <= 10){ // loop condition
+            console.log(num); // loop statement
+            num++; // loop variable change
+        }
+
+
+        //------------------------------------------------
+        // sum
+        let num1 = 1;
+        let sum = 0;
+        while(num1 <= 10){
+            // console.log(num1);
+            sum = sum + num;
+            console.log('sum:', sum);
+            num1++
+        }
+        //-------------------------------------------------
+        // even number 
+        let price = 1;
+        while(price <= 10){
+            console.log(price);
+            if(price % 2 === 0){
+                console.log('even number is:', price)
+            }
+            price++; 
+        }
+        //-----------------------------------------------------
+        // odd number
+        let odd = 1;
+        while(odd <= 20){
+            console.log(odd);
+            if(odd % 2 === 1){
+                console.log('odd number is:', odd)
+            }
+            odd++;
+        }
+        //-----------------------------------------------------------
+
+
+
+        // for Loop by even number
+        for(let i = 1; i <= 6; i++){
+            console.log(i);
+            if(i % 2 === 0){
+                console.log('Even number is:', i);
+            }
+        }
+        // Even
+        for(let i = 0; i <= 20; i=i+2 ){ // i+=2
+            console.log(i);  
+        }
+
+
+        // for Loop by odd number
+        for(let i = 1; i <= 15; i++){
+            console.log(i);
+            if(i % 2 === 1){
+                console.log('Odd number is:', i);
+            }
+        }
+
+        // odd
+        for(let i = 1; i <= 20; i=i+2){
+            console.log(i);  
+        }
+        //---------------------------------------------
+        // sum
+        let sum1 = 10;
+        for(let i = 11; i <= 20; i++){
+            sum1 = sum1 + i;
+            console.log(i);
+        }
+        console.log('sum of numbers from 11 to 20', sum1);
+
+        // decremental for loop
+        for(let i = 10; i >=0; i--){
+            console.log(i);
+        }
+
+        for(let i = 20; i >=11; i--){
+            console.log(i);
+        }
+
+        let n = 10;
+        while(n >=0){
+            console.log(n);
+            n--;
+        }
+
+
+        // give me the list numbers between 1 to 30 divisible by 5 & Display sum of all the even numbers from 1 to 30
+        let sum2 = 0;
+        for(let i = 1; i <= 30; i++){
+            if(i % 5 === 0){
+                console.log(i);
+                sum2 = sum2 + i;
+            }
+        }
+        console.log('Display sum of all the even numbers from 1 to 30:', sum2)
+
+        
+        // give me the list numbers between 1 to 30 divisible by 3 & Display sum of all the even numbers from 1 to 30
+        let sum3 = 0;
+        for(let i = 1; i <= 30; i++){
+            if(i % 3 === 0){
+                console.log(i);
+                sum3 = sum3 + i;
+            }
+        }
+        console.log('Display sum of all the even numbers from 1 to 30:', sum3)
+
+        
+        // give me the list numbers between 1 to 30 divisible by 3 or 5,  & Display sum of all the even numbers from 1 to 30
+        let sum4 = 0;
+        for(let i = 1; i <= 30; i++){
+            if(i % 3 === 0 || i % 5 === 0){
+                console.log(i);
+                sum4 = sum4 + i;
+            }
+        }
+        console.log('Display sum of all the even numbers from 1 to 30:', sum4)
+
+
+        // give me the list numbers between 1 to 30 divisible by 3 & 5,  & Display sum of all the even numbers from 1 to 30
+        let sum5 = 0;
+        for(let i = 1; i <= 30; i++){
+            if(i % 3 === 0 && i % 5 === 0){
+                console.log(i);
+                sum5 = sum5 + i;
+            }
+        }
+        console.log('Display sum of all the even numbers from 1 to 30:', sum5)
+
+
+        // break (for plain loop)
+        for(let i = 0; i <= 150; i++){
+            console.log('Break', i);
+            if(i >= 40){
+                break;
+            }
+        }
+        console.log('Life after break up');
+
+        // decremental break (while loop)
+        let m = 54;
+        while(m >= 25){
+            console.log(m);
+            if(m <= 50){
+                break;
+            }
+            m--;
+        }
+        console.log('Life after continue')
+
+        let p = 54
+        while(p >= 25){
+            if(p <= 50){
+                break;
+            }
+            console.log(p);
+            p--;
+        }
+        console.log('Life continue');
+
+        
+        // break --> loop end
+        // continue --> skip rest of the code for this iteration
+        for(let i = 1; i < 10; i++){
+            if(i % 2 === 0){
+                continue;
+            }
+            console.log(i);
+        }
+
+        let u = 0;
+        while(u < 15){
+            u++;
+            if(u % 5 !== 0){
+                continue;
+            }
+            console.log(u);
+        }
+
+
+
+    </script>
+</body>
+</html>

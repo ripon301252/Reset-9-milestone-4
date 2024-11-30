@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coding problem part-1</title>
+</head>
+<body>
+    <script>
+        // convert 
+        // 12 inch 1feet
+        function inchToFeet(inch){
+            const feet = inch / 12;
+            return feet;
+        }
+        const shuvoHight = inchToFeet(75);
+        console.log(shuvoHight);
+
+    console.log('---------------------------------')
+
+        // 75 (6 ft 3 inch)
+        function inchToFeet2(inch){
+            const feetFraction = inch / 12;
+            const feetNumber = parseInt(feetFraction);
+            const inchRemaining = inch % 12;
+            const result = feetNumber + ' ft ' + inchRemaining + ' inch ';
+            return result
+        }
+        const shuvoHight2 = inchToFeet2(75);
+        console.log(shuvoHight2); // 6 ft 3inch
+
+    console.log('---------------------------------')
+
+        // mile to kilometer
+        function mileToKilometer(mile){
+            const kilo = mile * 1.60934
+            return kilo;
+        }
+        const kilo = mileToKilometer(10);
+        console.log(kilo);
+
+    console.log('---------------------------------')
+
+        // kilometer to mile
+        function kilometerToMile(kilo){
+            const mile = kilo * 0.621371;
+            return mile;
+        }
+        const mile = kilometerToMile(10);
+        console.log(mile);
+
+    console.log('---------------------------------')
+    //----------------------------------------------
+
+        // leap year
+        // year will be a leap year if the year is divisible by 4 (simple logic)
+        function isLeapYear(year){
+            if(year % 4 === 0){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+        const isLeap = isLeapYear(2052);
+        console.log(isLeap);
+
+    console.log('---------------------------------')
+
+        // 1. those year that is not divisible by 100 and if the year is divisible by 4: then it will be a leap year.
+        // 2. 
+        function isLeapYear2(year){
+            if(year % 100 !== 0 && year % 4 === 0){
+                return true;
+            }
+            else if(year % 400 === 0){ // && year % 100 === 0 
+                return true;
+            }
+            else{
+
+                return false;
+            }
+        }   
+        const islipi = isLeapYear2(2100);
+        const islipi2 = isLeapYear2(2400);
+        const islipi3 = isLeapYear2(1900);
+        const islipi4 = isLeapYear2(2052);
+        console.log(islipi, islipi2, islipi3, islipi4);
+        
+    console.log('---------------------------------')
+    //------------------------------------------------
+
+        // odd average
+        // 1. function takes an array as parameter
+        // 2. give me the average of the odd numbers in the array 
+        function oddAverage(numbers){
+            let sum = 0;
+            for(const number of numbers){
+                if(number % 2 === 1){
+                    // console.log(number);
+                    sum = sum + number;
+                    average = sum / 5;
+                }
+                // console.log('total odd numbers is', sum);
+            }
+            return average;
+        }
+        const numbers = [42, 13, 58, 65, 81, 96, 7, 5];
+        const avg = oddAverage(numbers);
+        console.log('average of the odd numbers is:', avg);
+
+    console.log('---------------------------------')
+
+        // odd average
+        // 1. function takes an array as parameter
+        // 2. give me the average of the odd numbers in the array 
+        function oddAverage2(numbers){
+            const odds = []
+            for(const number of numbers){
+                if(number % 2 === 1){
+                    // console.log(number);
+                    odds.push(number);
+                }
+            }
+            // odds is the array that contains only the odd numbers
+            //console.log(odds);
+            let sum = 0;
+            for(number of odds){
+                sum = sum + number;
+            }
+            const count = odds.length;
+            console.log(sum, count);
+            const avg = sum / count
+            return avg;
+        }
+        const disits = [42, 13, 58, 65, 81, 96, 7, 5];
+        const avg2 = oddAverage2(disits);
+        console.log('average of the odd numbers is:', avg2);
+        
+    console.log('---------------------------------')
+    //------------------------------------------------
+
+        // duplicate remove
+        // array has some duplicate elements
+        // []
+        const biryaniKhor = ['abul', 'babul', 'cabul', 'abul', 'babul', 'dabul', 'kabul', 'cabul'];
+        function noDuplicate(array){
+            const unique = [];
+            for(const item of array){
+            if(unique.includes(item) === false){
+                    unique.push(item);
+            }
+            }
+            return unique;
+        }
+        const uniqueArray = noDuplicate(biryaniKhor);
+        console.log(uniqueArray);
+
+    console.log('-----------------------------------')
+        
+        const numbers2 = [1, 5, 61, 5, 87, 7, 5, 81, 61];
+        function noDuplicate(array){
+                const unique = [];
+                for(const item of array){
+                if(unique.includes(item) === false){
+                        unique.push(item);
+                }
+                }
+                return unique;
+            }
+            const uniqueArray2 = noDuplicate(numbers2);
+            console.log(uniqueArray2);
+        
+    console.log('--------------------------------------')
+    //---------------------------------------------------
+
+        // Math
+        const min = Math.min(45, 21, 65, 99, 126, -1000);
+        console.log(min);
+
+        const max = Math.max(45, 21, 65, 99, 126, -1000);
+        console.log(max); 
+        
+        console.log(Math.PI);
+        console.log(Math.abs(100-50));
+        console.log(Math.round(2.4));
+        console.log(Math.round(2.85));
+        console.log(Math.floor(2.95))
+        console.log(Math.ceil(2.95))
+        console.log(Math.random()*10);
+
+        const rand = Math.round(Math.random()*10);
+        console.log(rand);
+    //--------------------------------------------------- 
+    console.log('--------------------------------------')       
+
+        // Date
+        const today = new Date();
+        console.log(today);
+
+        const date = new Date('2062-10-19');
+        console.log(date.getMonth());
+        console.log(date.getDay());
+        const specificDate = new Date(2091, 0, 26);
+        console.log(specificDate);
+        specificDate.setMonth(10);
+        console.log(specificDate.toLocaleString('en-GB'));
+        
+         // unix epoc 
+    console.log('--------------------------------------') 
+    //---------------------------------------------------      
+    
+        // swap
+        let a = 5;
+        let b = 7;
+        console.log(a, b);
+
+        // a = b;
+        // b = a;
+        // console.log(a, b);
+
+        const temp = a;
+        a = b;
+        b = temp;
+        console.log(a, b);
+
+    console.log('--------------------------------------') 
+
+        // distructure
+        let x = 5;
+        let y = 7;
+        console.log(x, y);
+
+        [x, y] = [y, x];
+        console.log(x, y);
+        
+    console.log('--------------------------------------') 
+    //---------------------------------------------------     
+
+
+
+
+
+
+    </script>
+</body>
+</html>

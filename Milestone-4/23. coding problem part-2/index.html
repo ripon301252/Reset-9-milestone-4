@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coding problem part-2</title>
+</head>
+<body>
+    <script>
+       // max
+       const salaman = 60;
+       const disha = 50;
+       if(salaman > disha){
+            console.log('salman will get the apple')
+       }
+       else{
+        console.log('disha will get the apple')
+       }
+
+    console.log('-----------------------------------------')
+
+       // inside a function Biggest
+       function getMax(num1, num2){
+            if(num1 > num2){
+                return num1
+            }
+            else{
+                return num2
+            }
+       }
+       const max1 = getMax(56, 79);
+       const max2 = getMax(96, 99)
+       const ultimateMax = getMax(max1, max2)
+       console.log('max of two is:', max1, max2);
+       console.log('max of two is:', ultimateMax);
+
+    console.log('-----------------------------------------')
+
+       // 3 of max
+        const jim = 56;
+        const kim = 54;
+        const tim = 50;
+        if(jim > tim && jim > kim){
+            console.log('jim is the ultimate boss');
+        }
+        else if(kim > tim && kim > jim){
+            console.log('kim is the boss');
+        }
+        else{
+            console.log('tim is the boss');
+        }
+
+    console.log('-----------------------------------------')
+
+        function maxOfThree(num1, num2, num3){
+            if(num1 > num2 && num1 > num3){
+                console.log('num1 is the ultimate boss');
+            }
+            else if(num2 > num1 && num2 > num3){
+                console.log('num2 is the boss');
+            }
+            else{
+                console.log('num3 is the boss');
+            }
+        }
+        maxOfThree(30, 50, 66);
+
+    console.log('-----------------------------------------')  
+
+        const min = Math.max(12, 1, 56);
+        console.log('max isusing Math.max', min);
+      
+    console.log('-----------------------------------------')  
+    //------------------------------------------------------  
+
+    // tallest ber kora
+        const heights = [65, 66, 68, 72, 78, 60, 71, 62];
+        function getMax2(numbers){
+            let max = numbers[0];
+            for(const num of numbers){
+                if(num > max){
+                    max = num;
+                }
+            }
+            return max;
+        }
+        const max3 = getMax2(heights);
+        console.log('max value is', max3);
+
+
+        // min ber kora
+        const mini = [65, 66, 68, 72, 78, 60, 71, 62];
+        function getMin(numbers){
+            let min = numbers[0];
+            for(const num of numbers){
+                if(num < min){
+                    min = num;
+                }
+            }
+            return min;
+        }
+        const max4 = getMin(heights);
+        console.log('minimum value is', max4);
+
+    console.log('-----------------------------------------')  
+    //------------------------------------------------------
+        
+        // chair --> 3 cft 
+        // table --> 10 cft
+        // bed --> 50 cft
+
+        function woodQuantity(chairQty, tableQty, bedQty){
+            const perChairWood = 3;
+            const perTableWood = 10;
+            const perBedWood = 50;
+
+            const ChairTotalWood = chairQty * perChairWood;
+            const tableTotalWood = tableQty * perTableWood;
+            const bedTotalWood = bedQty * perBedWood;
+
+            const totalWood = ChairTotalWood + tableTotalWood+ bedTotalWood;
+            return totalWood;
+        }
+        const wood = woodQuantity(1, 1, 1);
+        console.log('wood needed', wood , 'cft');
+
+    console.log('-----------------------------------------') 
+
+        // shirt price --> 500
+        // pant price --> 300
+        // shoe price --> 900
+
+        function marketCost(shirtQty, pantQty, shoeQty){
+            const perShirtPrice = 500;
+            const perPantPrice = 300;
+            const perShoePrice = 900;
+
+            const shirtTotalPrice = shirtQty * perShirtPrice;
+            const pantTotalPrice = pantQty * perPantPrice;
+            const shoeTotalPrice = shoeQty * perShoePrice;
+
+            const totalPrice = shirtTotalPrice + pantTotalPrice + shoeTotalPrice;
+            return totalPrice;
+        }
+        const totalCost = marketCost(1, 1, 1);
+        console.log(totalCost);
+
+    //------------------------------------------------------
+    console.log('------------------------------------------') 
+        
+        // lowest
+        const prices = [20000, 16000, 50000, 100000, 12000, 30000, 35000];
+
+        function getLowest(numbers){
+            let minPrice = numbers[0];
+            for(const number of numbers){
+                if(number < minPrice){    // number jodi minPrice er chaite choto hoy
+                    minPrice = number;
+                }
+            }
+            return minPrice;
+        }
+        const lowPrice = getLowest(prices);
+        console.log('Lowprice one is', lowPrice);
+
+    console.log('------------------------------------------');
+        // object theke min ber kora
+        const mobiles = [
+            {name: 'samsung', price: 20000, camera: '12mp', color: 'black'},
+            {name: 'xoami', price: 18000, camera: '12mp', color: 'black'},
+            {name: 'oppo', price: 30000, camera: '12mp', color: 'black'},
+            {name: 'Iphone', price: 100000, camera: '12mp', color: 'black'},
+            {name: 'walton', price: 31000, camera: '12mp', color: 'black'},
+            {name: 'HTC', price: 27000, camera: '12mp', color: 'black'},
+        ]
+
+        function getCheapestPhone(phones){
+            let min = phones[0];
+            for(const phone of phones){
+                if(phone.price < min.price){
+                    min = phone
+                }
+            }
+            return min;
+        }
+        const cheap = getCheapestPhone(mobiles);
+        console.log('cheapest phone is:', cheap);
+
+    console.log('------------------------------------------');
+
+        // object theke biggest ber kora
+        function getBiggestPricePhone(phones){
+            let biggest = phones[0];
+            for(const phone of phones){
+                if(phone.price > biggest.price){
+                    biggest = phone;
+                }
+            }
+            return biggest;
+        }
+        const biggest = getBiggestPricePhone(mobiles);
+        console.log(biggest);
+
+    console.log('------------------------------------------');
+    //-------------------------------------------------------    
+
+        // total
+        const product = [
+            {name: 'shampoo', price: 300},
+            {name: 'chiruni', price: 100},
+            {name: 'shirt', price: 700},
+            {name: 'pant', price: 1200},
+            {name: 'shoe', price: 1500},
+        ];
+        function getShoppingTotal(products){
+            let sum = 0;
+            for(const product of products){
+                sum = sum + product.price;
+            }
+            return sum;
+        }
+        const total = getShoppingTotal(product);
+        console.log('total ajk khoshabe:', total)
+
+
+    console.log('------------------------------------------');
+        
+        const products = [
+            {name: 'shampoo', price: 300, qty: 1},
+            {name: 'chiruni', price: 100, qty: 1},
+            {name: 'shirt', price: 700, qty: 2},
+            {name: 'pant', price: 1200, qty: 5},
+            {name: 'shoe', price: 1500, qty: 1},
+        ];
+
+        function cartTotal(products){
+            let sum = 0;
+            for(const product of products){
+                const thisProductCost = product.price * product.qty;
+                sum = sum + thisProductCost;
+            }
+            return sum;
+        }
+        const shoppingCost = cartTotal(products)
+        console.log(shoppingCost);
+
+    console.log('------------------------------------------');
+    //------------------------------------------------------ 
+
+            // up to 100 --> 100 tk
+            // more then 101 to 200 --> 90 tk
+            // more then 200 --> 70 tk
+
+            function discountedPrice(quantity){
+                if(quantity <= 100){
+                    const total = quantity * 100;
+                    return total;
+                }
+                else if(quantity <= 200){
+                    const total = quantity * 90;
+                    return total;
+                }
+                else{
+                    const total = quantity * 70;
+                    return total
+                }
+            }
+            const discountTotal = discountedPrice(201);
+            console.log('201 pcs is cost', discountTotal, 'tk');
+
+    console.log('-------------------------------------')
+            
+            // first 100   --> 100
+            // 101 to 200  --> 90
+            // above 200   --> 70
+
+            function layeredDiscountedTotal(quantity){
+                const first100Price = 100; // 1st 100 er price
+                const second100Price = 90;
+                const above200Price = 70;
+
+                if(quantity <= 100){ // quantity jodi 100 er kom ba soman hoy
+                    const total = quantity * first100Price;
+                    return total;
+                }
+                else if(quantity <= 200){ // quantity jodi 200 er kom ba soman hoy
+                    const first100PTotal = 100 * first100Price;
+                    const remainingQuantity = quantity - 100;
+                    const remainingTotal = remainingQuantity * second100Price;
+                    const total = first100PTotal + remainingTotal;
+                    return total;
+                }
+                else{
+                    const first100PTotal = 100 * first100Price;
+                    const second100Total = 100 * second100Price;
+                    const remainingQuantity = quantity - 200;
+                    const remainingTotal = remainingQuantity * above200Price;
+                    const total = first100PTotal + second100Total + remainingTotal
+                    return total;
+                }
+            }
+            const total2 = layeredDiscountedTotal(201);
+            console.log(total2);
+        
+        console.log('-------------------------------------')
+        //---------------------------------------------------
+
+            // calculator
+            function add(num1, num2){
+                return num1 + num2;
+            }
+
+            function subtract(num1, num2){
+                return num1 - num2;
+            }
+
+            function multiply(num1, num2){
+                return num1 * num2;
+            }
+
+            function divide(num1, num2){
+                return num1 / num2;
+            }
+
+            function calculator(a, b, operation){
+                if(operation === 'add'){
+                    const result = add(a, b);
+                    return result;
+                }
+                else if(operation === 'subtract'){
+                    const result = subtract(a, b)
+                    return result;
+                }
+                else if(operation === 'multiply'){
+                    const result = multiply(a, b);
+                    return result
+                }
+                else if(operation === 'divide'){
+                    return divide(a, b);
+                }
+                else{
+                    return "Only 'add', 'subtract', 'multiply', 'divide' operation is allowed. "
+                }
+            }
+            const added = calculator(5, 7, 'add');
+            console.log(added);
+
+            const subs = calculator(5, 7, 'subtract');
+            console.log(subs);
+
+            const multi = calculator(5, 7, 'multiply');
+            console.log(multi);
+
+            const div = calculator(5, 7, 'divide');
+            console.log(div);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
